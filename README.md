@@ -667,11 +667,11 @@ credentials. Use the Secrets Manager rotate-secret command in the AWS CLI to for
 
 - [ ] Option A: Add the following statement to the IAM managed CMKs.
 ![Question 14 option A](images/question14_A.jpg)
-- [ ] Option B: Add the following statement to the CMK key policy.
+- [x] Option B: Add the following statement to the CMK key policy.
 ![Question 14 option B](images/question14_B.jpg)
 - [ ] Option C: Add the following statement to the CMK key policy.
 ![Question 14 option C](images/question14_C.jpg)
-- [x] Option D: Add the following statement to the CMK key policy.
+- [ ] Option D: Add the following statement to the CMK key policy.
 ![Question 14 option D](images/question14_D.jpg)
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -699,10 +699,10 @@ credentials. Use the Secrets Manager rotate-secret command in the AWS CLI to for
 
 ![Question 17](images/question17.jpg)
 
-- [ ] Move the logs:CreateLogGroup action to the second Allow statement.
-- [ ] Add the logs:PutDestination action to the second Allow statement.
-- [ ] Add the logs:GetLogEvents action to the second Allow statement.
-- [x] Add the logs:GetLogEvents action to the second Allow statement.
+- [ ] Move the `logs:CreateLogGroup` action to the second Allow statement.
+- [ ] Add the `logs:PutDestination` action to the second Allow statement.
+- [ ] Add the `logs:GetLogEvents` action to the second Allow statement.
+- [x] Add the `logs:CreateLogStream` action to the second Allow statement.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -927,7 +927,7 @@ credentials. Use the Secrets Manager rotate-secret command in the AWS CLI to for
 
 ### An application team wants to use IAM Certificate Manager (ACM) to request public certificates to ensure that data is secured in transit. The domains that are being used are not currently hosted on Amazon Route 53 The application team wants to use an IAM managed distribution and caching solution to optimize requests to its systems and provide better points of presence to customers The distribution solution will use a primary domain name that is customized The distribution solution also will use several alternative domain names The certificates must renew automatically over an indefinite period of time. Which combination of steps should the application team take to deploy this architecture? (Select THREE)
 
-- [x] Request a certificate for ACM in the `us-west-2` Region Add the domain names that the certificate will secure.
+- [x] Request a certificate for ACM in the `us-west-2`. Region Add the domain names that the certificate will secure.
 - [ ] Send an email message to the domain administrators to request vacation of the domains for ACM.
 - [x] Request validation of the domains for ACM through DNS Insert CNAME records into each domain's DNS zone.
 - [ ] Create an Application Load Balancer for me caching solution Select the newly requested certificate from ACM to be used for secure connections.
@@ -1068,12 +1068,12 @@ credentials. Use the Secrets Manager rotate-secret command in the AWS CLI to for
 
 ### A security engineer receives an IAM abuse email message. According to the message, an Amazon EC2 instance that is running in the security engineer's IAM account is sending phishing email messages.  The EC2 instance is part of an application that is deployed in production. The application runs on many EC2 instances behind an Application Load Balancer. The instances run in an Amazon EC2 Auto Scaling group across multiple subnets and multiple Availability Zones. The instances normally communicate only over the HTTP. HTTPS, and MySQL protocols. Upon investigation, the security engineer discovers that email messages are being sent over port 587. All other traffic is normal. The security engineer must create a solution that contains the compromised EC2 instance, preserves forensic evidence for analysis, and minimizes application downtime. Which combination of steps must the security engineer take to meet these requirements? (Select THREE)
 
-- [x] Add an outbound rule to the security group that is attached to the compromised EC2 instance to deny traffic to 0.0.0.0/0 and port 587.
-- [ ] Add an outbound rule to the network ACL for the subnet that contains the compromised EC2 instance to deny traffic to 0.0.0.0/0 and port 587.
+- [ ] Add an outbound rule to the security group that is attached to the compromised EC2 instance to deny traffic to 0.0.0.0/0 and port 587.
+- [x] Add an outbound rule to the network ACL for the subnet that contains the compromised EC2 instance to deny traffic to 0.0.0.0/0 and port 587.
 - [x] Gather volatile memory from the compromised EC2 instance. Suspend the compromised EC2 instance from the Auto Scaling group. Then take a snapshot of the compromised EC2 instance.
 - [ ] Take a snapshot of the compromised EC2 instance. Suspend the compromised EC2 instance from the Auto Scaling group. Then gather volatile memory from the compromised EC2 instance.
-- [x] Move the compromised EC2 instance to an isolated subnet that has a network ACL that has no inbound rules or outbound rules.
-- [ ] Replace the existing security group that is attached to the compromised EC2 instance with a new security group that has no inbound rules or outbound rules.
+- [ ] Move the compromised EC2 instance to an isolated subnet that has a network ACL that has no inbound rules or outbound rules.
+- [x] Replace the existing security group that is attached to the compromised EC2 instance with a new security group that has no inbound rules or outbound rules.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3805,7 +3805,7 @@ API.
 
 ### An application has been written that publishes custom metrics to Amazon CloudWatch. Recently, IAM changes have been made on the account and the metrics are no longer being reported. Which of the following is the LEAST permissive solution that will allow the metrics to be delivered?
 
-- [ ] Add a statement to the IAM policy used by the application to allow logs:putLogEvents and logs:createLogStream.
+- [ ] Add a statement to the IAM policy used by the application to allow `logs:putLogEvents` and `logs:createLogStream`.
 - [ ] Modify the IAM role used by the application by adding the CloudWatchFullAccess managed policy.
 - [x] Add a statement to the IAM policy used by the application to allow `cloudwatch:putMetricData`.
 - [ ] Add a trust relationship to the IAM role used by the application for cloudwatch.amazonaws.com.
@@ -4315,8 +4315,8 @@ API.
 
 - [ ] Pass the key alias to AWS KMS when calling Encrypt and Decrypt API actions.
 - [ ] Use IAM policies to restrict access to Encrypt and Decrypt API actions.
-- [ ] Use `kms:EncryptionContext` as a condition when defining IAM policies for the CMK.
-- [x] Use key policies to restrict access to the appropriate IAM groups.
+- [x] Use `kms:EncryptionContext` as a condition when defining IAM policies for the CMK.
+- [ ] Use key policies to restrict access to the appropriate IAM groups.
 
 **[⬆ Back to Top](#table-of-contents)**
 
